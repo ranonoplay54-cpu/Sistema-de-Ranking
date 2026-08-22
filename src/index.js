@@ -68,7 +68,7 @@ client.once('ready', async () => {
 client.on('interactionCreate', async (interaction) => {
   try {
     // 1. Comando Slash /ranking
-    if (interaction.isChatInput(); interaction.commandName === 'ranking') {
+    if (interaction.isChatInput() && interaction.commandName === 'ranking') {
       if (!hasOwnerPermission(interaction.member)) {
         return interaction.reply({
           content: '🔒 Você não possui permissão para utilizar esta função.',
